@@ -22,6 +22,18 @@ export default StyleSheet.create({
         shadowColor:'black',
         shadowOffset:10,
     },
+    input:{
+        width: '30%',
+        height: '15%',
+        alignContent:'center',
+        backgroundColor:'#9aedae',
+        justifyContent:'center',
+        textAlign:'center'
+
+
+
+
+    }
 
 
 })
