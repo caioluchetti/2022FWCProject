@@ -1,49 +1,58 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TouchableOpacity, Dimensions, Image, TextInput } from 'react-native';
-import React, {useEffect} from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from '../style/styles';
-import TextInputMask from 'react-native-text-input-mask';
+import { TextInputMask } from 'react-native-masked-text'
 
-const ProductCodeInput = ({value, onChangeText}) => {
-    const mask = '[AA]{#}[00]{-}[000]';
-    return (
-      <TextInputMask
-        style={styles.maskedInput}
-        mask={mask}
-        value={value}
-        onChangeText={onChangeText}
-        placeholder="NN#00-000"
-        placeholderTextColor="grey"
-      />
-    );
-  }
 
-export default function Cadastrar(props){
+
+export default function Cadastrar(props) {
 
     const metadeTela = Dimensions.get('window').width / 2 * 0.95;
     const [fig, onChangeNumber] = React.useState(null);
+    const [cell, setCell] = useState('');
+
+    state = {
+        count: 0
+      }
 
 
     return (
-    
+
 
         <View style={styles.container}>
-                
-                <ProductCodeInput value={productCode} onChangeText={(formatted) => setProductCode(formatted)}/>
 
-            <TextInput
-        style={styles.input}
-        onChangeText={onChangeNumber}
-        value={fig}
-        placeholder="FIGURINHA"
-        keyboardType="default"
-        autoCapitalize = {"characters"}
+        <View style={styles.headcadastro}>
 
-           />
+        <Text style={styles.tcontagem}>O numero de figurinhas atual é:</Text> 
+        <Text style={styles.ncontagem}> {state.count}</Text>
+
+        </View>
+            
+            
+            <TextInputMask
+                style={styles.input}
+                type={'custom'}
+                options={{
+                    mask: 'AAA99'
+                }
+                }
+                value={cell}
+                onChangeText={text => setCell(text)}
+                placeholder='AAA00'
+                autoCapitalize={"characters"}
+
+            />
+
+<TouchableOpacity style={styles.botaoCadastro}>
+  <Text style={styles.tcadastro}>Cadastrar</Text>            
+</TouchableOpacity>
         </View>
         
 
-        
+
+
+
     );
 
 }

@@ -14,7 +14,7 @@ export default function Main(props){
 
         <View style={styles.container}>
 
-                <Image source={require('../imgs/fwc.png')} style={{ width: metadeTela+20, height: metadeTela+60, marginBottom: 10 }} />
+                <Image source={require('../imgs/fwc.png')} style={{ width: metadeTela+20, height: metadeTela+80, marginBottom: 20 }} />
 
         <View style={{flexDirection:'row',margin:10}}>
                 <TouchableOpacity style={styles.botaoMain} onPress={() => props.navigation.navigate('Cadastrar Figurinha')}>
