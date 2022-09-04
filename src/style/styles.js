@@ -8,7 +8,8 @@ export default StyleSheet.create({
         alignItems:'center',
         alignSelf:'center',
         flex:1,
-        width:'80%'
+        width:'100%',
+        
 
     },
     botaoMain:{
@@ -23,8 +24,7 @@ export default StyleSheet.create({
         width: '30%',
         height: '40%',
         shadowColor:'black',
-        shadowOffset:10,
-    },
+        },
     botaoCadastro:{
         margin:10,
         alignContent:'center',
@@ -37,8 +37,7 @@ export default StyleSheet.create({
         width: '30%',
         height: '10%',
         shadowColor:'black',
-        shadowOffset:10,
-    },
+    }, 
     input:{
         width: '30%',
         height: '15%',
@@ -73,17 +72,20 @@ export default StyleSheet.create({
         fontSize:20,
         color: 'white',
         textShadowRadius: 6,
-        width:'80%'
-        
+        width:'60%',
+        flexWrap:'wrap',
 
 
     },
     ncontagem:{
 
-        textAlign:'left',
+        alignContent:'center',
+        alignItems:'center',
+        alignSelf:'center',
+        textAlign:'center',
         textShadowColor:'black',
         fontWeight: 'bold',
-        fontSize:20,
+        fontSize:70,
         color: '#9B072E',
         textShadowRadius: 6,
         width:'20%'
@@ -91,8 +93,9 @@ export default StyleSheet.create({
     headcadastro:{
 
         alignContent:'center',
-        flexDirection:'row',
+        flexDirection:'column',
         margin:20,
+        
     }
 
 
