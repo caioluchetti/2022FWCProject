@@ -1,125 +1,166 @@
+
 export const cromos = [
 
     {
-        pais: "QAT",
-        numero: 1,
-        possui: false,
-        
+        pais: "Qatar",
+        rota: "Qatar",
+        imagem: require('../imgs/qatar.jpg'),
     },
     {
-        pais: "QAT",
-        numero: 2,
-        possui: false,
-        
+        pais: "Equador",
+        rota: 'Qatar',
+        imagem: require('../imgs/equador.png'),
     },
     {
-        pais: "QAT",
-        numero: 3,
-        possui: false,
-        
+        pais: "Senegal",
+        rota: 'Qatar',
+        imagem: require('../imgs/senegal.png'),
     },
     {
-        pais: "QAT",
-        numero: 4,
-        possui: false,
-        
+        pais: "Holanda",
+        rota: 'Qatar',
+        imagem: require('../imgs/holanda.jpg'),
     },
     {
-        pais: "QAT",
-        numero: 5,
-        possui: false,
-        
+        pais: "Inglaterra",
+        rota: 'Qatar',
+        imagem: require('../imgs/inglaterra.png'),
     },
     {
-        pais: "QAT",
-        numero: 6,
-        possui: false,
-        
+        pais: "Iran",
+        rota: 'Qatar',
+        imagem: require('../imgs/iran.png'),
     },
     {
-        pais: "QAT",
-        numero: 7,
-        possui: false,
-        
+        pais: "EUA",
+        rota: 'Qatar',
+        imagem: require('../imgs/eua.png'),
     },
     {
-        pais: "QAT",
-        numero: 8,
-        possui: false,
-        
+        pais: "País de Gales",
+        rota: 'Qatar',
+        imagem: require('../imgs/wales.png'),
     },
     {
-        pais: "QAT",
-        numero: 9,
-        possui: false,
-        
+        pais: "Argentina",
+        rota: 'Qatar',
+        imagem: require('../imgs/argentina.png'),
     },
     {
-        pais: "QAT",
-        numero: 10,
-        possui: false,
-        
+        pais: "Arábia Saudita",
+        rota: 'Qatar',
+        imagem: require('../imgs/saudi.png'),
     },
     {
-        pais: "QAT",
-        numero: 11,
-        possui: false,
-        
+        pais: "México",
+        rota: 'Qatar',
+        imagem: require('../imgs/mexico.png'),
     },
     {
-        pais: "QAT",
-        numero: 12,
-        possui: false,
-        
+        pais: "Polonia",
+        rota: 'Qatar',
+        imagem: require('../imgs/polonia.png'),
     },
     {
-        pais: "QAT",
-        numero: 13,
-        possui: false,
-        
+        pais: "França",
+        rota: 'Qatar',
+        imagem: require('../imgs/france.png'),
     },
     {
-        pais: "QAT",
-        numero: 14,
-        possui: false,
-        
+        pais: "Austrália",
+        rota: 'Qatar',
+        imagem: require('../imgs/australia.png'),
     },
     {
-        pais: "QAT",
-        numero: 15,
-        possui: false,
-        
+        pais: "Dinamarca",
+        rota: 'Qatar',
+        imagem: require('../imgs/dinamarca.png'),
     },
     {
-        pais: "QAT",
-        numero: 16,
-        possui: false,
-        
+        pais: "Tunisia",
+        rota: 'Qatar',
+        imagem: require('../imgs/tunisia.png'),
     },
     {
-        pais: "QAT",
-        numero: 17,
-        possui: false,
-        
+        pais: "Espanha",
+        rota: 'Qatar',
+        imagem: require('../imgs/spain.png'),
     },
     {
-        pais: "QAT",
-        numero: 18,
-        possui: false,
-        
+        pais: "Costa Rica",
+        rota: 'Qatar',
+        imagem: require('../imgs/costari.png'),
     },
     {
-        pais: "QAT",
-        numero: 19,
-        possui: false,
-        
+        pais: "Alemanha",
+        rota: 'Qatar',
+        imagem: require('../imgs/germany.png'),
     },
     {
-        pais: "QAT",
-        numero: 20,
-        possui: false,
-        
+        pais: "Japão",
+        rota: 'Qatar',
+        imagem: require('../imgs/japao.png'),
+    },
+    {
+        pais: "Bélgica",
+        rota: 'Qatar',
+        imagem: require('../imgs/belgica.png'),
+    },
+    {
+        pais: "Canadá",
+        rota: 'Qatar',
+        imagem: require('../imgs/canada.png'),
+    },
+    {
+        pais: "Marrocos",
+        rota: 'Qatar',
+        imagem: require('../imgs/marrocos.png'),
+    },
+    {
+        pais: "Croácia",
+        rota: 'Qatar',
+        imagem: require('../imgs/croacia.png'),
+    },
+    {
+        pais: "Brasil",
+        rota: 'Qatar',
+        imagem: require('../imgs/brasil.png'),
+    },
+    {
+        pais: "Sérvia",
+        rota: 'Qatar',
+        imagem: require('../imgs/servia.jpg'),
+    },
+    {
+        pais: "Suíça",
+        rota: 'Qatar',
+        imagem: require('../imgs/suica.png'),
+    },
+    {
+        pais: "Camarões",
+        rota: 'Qatar',
+        imagem: require('../imgs/camaroes.png'),
+    },
+    {
+        pais: "Portugal",
+        rota: 'Qatar',
+        imagem: require('../imgs/portugal.png'),
+    },
+    {
+        pais: "Gana",
+        rota: 'Qatar',
+        imagem: require('../imgs/gana.png'),
+    },
+    {
+        pais: "Uruguai",
+        rota: 'Qatar',
+        imagem: require('../imgs/uruguai.png'),
+    },
+    {
+        pais: "Coréia do sul",
+        rota: 'Qatar',
+        imagem: require('../imgs/coreia.png'),
     },
     
-
+    
 ]

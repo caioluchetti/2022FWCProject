@@ -11,6 +11,7 @@ export default function Album(props){
     const metadeTela = Dimensions.get('window').width / 2 * 0.95;
 
     const [vetor, setArray] = useState([]);
+    const [codfig, setCodfig] = useState('')
 
     useEffect(() => {
         listFig();
@@ -29,6 +30,12 @@ export default function Album(props){
 
 
     }
+    
+    function cadastrarFig(param){
+
+            setCodfig(param);
+            console.log(param)
+        }
 
     return (
         <KeyboardAvoidingView 
@@ -41,19 +48,39 @@ export default function Album(props){
 
                 {
                         vetor && vetor.map(function (array) {
+                            if(array.POSSUI == 1){
                             return (
-                                    <TouchableOpacity key={array.CODIGO} style={{ borderColor: 'rgba(20,70,20,.3)', marginTop:20,marginHorizontal:5 , borderWidth: 2, padding: 0, flexDirection: 'column', width: '25%',height:40, borderRadius: 10 }}>
-                                        <View style={{ width: "100%", alignContent: 'center', alignItems: 'center' }}>
-                                            <Text style={{ fontWeight: 'bold', textAlign: 'center',fontSize:10 }}>
-                                                {array.PAGINA}
-                                            </Text>
-                                            <Text style={{ fontStyle: 'italic', textAlign: 'center',fontSize:10  }}>
-                                                {array.CODIGO}
-                                            </Text>
-                                        </View>
-                                    </TouchableOpacity>
+                               
 
-                            );
+                                    <TouchableOpacity key={array.CODIGO} style={{backgroundColor:'rgba(20,80,20,.3)', borderColor: 'rgba(20,70,20,.3)', marginTop:20,marginHorizontal:5 , borderWidth: 2, padding: 0, flexDirection: 'column', width: '25%',height:40, borderRadius: 10 }}>
+                                    <View style={{ width: "100%", alignContent: 'center', alignItems: 'center' }}>
+                                        <Text style={{ fontWeight: 'bold', textAlign: 'center',fontSize:10 }}>
+                                            {array.PAGINA}
+                                        </Text>
+                                        <Text style={{ fontStyle: 'italic', textAlign: 'center',fontSize:10  }}>
+                                            {array.CODIGO}
+                                        </Text>
+                                    </View>
+                                </TouchableOpacity>
+
+
+                                
+                                   
+                            );}else{
+                                return (
+                                <TouchableOpacity key={array.CODIGO} onPress={cadastrarFig(array.codigo)} style={{ backgroundColor:'rgba(80,20,20,.3)', marginTop:20,marginHorizontal:5 , borderWidth: 2, padding: 0, flexDirection: 'column', width: '25%',height:40, borderRadius: 10 }}>
+                                    <View style={{ width: "100%", alignContent: 'center', alignItems: 'center' }}>
+                                        <Text style={{ fontWeight: 'bold', textAlign: 'center',fontSize:10 }}>
+                                            {array.PAGINA}
+                                        </Text>
+                                        <Text style={{ fontStyle: 'italic', textAlign: 'center',fontSize:10  }}>
+                                            {array.CODIGO}
+                                        </Text>
+                                    </View>
+                                </TouchableOpacity>
+
+                        );}
+
                         })
 
 
