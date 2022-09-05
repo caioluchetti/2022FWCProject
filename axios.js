@@ -1,7 +1,7 @@
 import Axios from "axios";
 
 const axios = Axios.create({
-    baseURL: "http://192.168.15.43:8060",
+    baseURL: "https://figurinhasapp.herokuapp.com/",
     timeout: 10000
 })
 

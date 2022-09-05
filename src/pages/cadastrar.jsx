@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TouchableOpacity, Dimensions, Image, TextInput ,Alert} from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Dimensions, Image, TextInput ,Alert, KeyboardAvoidingView,ScrollView, SafeAreaView} from 'react-native';
 import React, { useEffect, useState } from 'react';
 import styles from '../style/styles';
 import { TextInputMask } from 'react-native-masked-text';
@@ -59,7 +59,12 @@ export default function Cadastrar(props) {
     return (
 
 
-        <View style={styles.container}>
+        <KeyboardAvoidingView 
+        behavior={Platform.OS === "ios" ? "padding" : "height"}
+            style={styles.container}
+            keyboardVerticalOffset={70}>
+            <ScrollView style={{width:'100%'}}>
+            <SafeAreaView style={styles.container}>
 
         <View style={styles.headcadastro}>
 
@@ -89,7 +94,9 @@ export default function Cadastrar(props) {
                 <TouchableOpacity style={styles.botaovoltar} onPress={() => props.navigation.navigate('Home')}>
                   <Text>VOLTAR</Text>
                 </TouchableOpacity>
-        </View>
+                </SafeAreaView>
+                </ScrollView>
+        </KeyboardAvoidingView>
         
 
 

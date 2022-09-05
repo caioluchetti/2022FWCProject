@@ -12,6 +12,17 @@ export default StyleSheet.create({
         
 
     },
+    containerAlbum:{
+        justifyContent:'center',
+        alignItems:'center',
+        alignSelf:'center',
+        flex:1,
+        width:'100%',
+        flexWrap:'wrap',
+        flexDirection:'row'
+        
+
+    },
     botaoMain:{
         margin:10,
         alignContent:'center',
@@ -94,7 +105,7 @@ export default StyleSheet.create({
 
         alignContent:'center',
         flexDirection:'column',
-        margin:20,
+        margin:10,
         
     }
 

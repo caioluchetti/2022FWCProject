@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TouchableOpacity, Dimensions, Image } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Dimensions, Image,SafeAreaView  } from 'react-native';
 import React, {useEffect} from 'react';
 import styles from '../style/styles';
 
@@ -10,8 +10,7 @@ export default function Main(props){
 
 
     return (
-
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
 
                 <Image source={require('../imgs/fwc.png')} style={{ width: metadeTela+20, height: metadeTela+80, marginBottom: 20 }} />
 
@@ -25,12 +24,12 @@ export default function Main(props){
 
         </View>
                
-        </View>
+    
 
 
 
 
-
+        </SafeAreaView>
 
 
     );
