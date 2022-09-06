@@ -17,9 +17,8 @@ export default function Qatar(props) {
     const [cell, setCell] = useState('');
 
     useEffect(()=>{
-        listFig();
-        setCell("Qatar")
-        
+        listFig();        
+
       },[])
       
       const paramfig = {
@@ -55,6 +54,7 @@ export default function Qatar(props) {
             Alert.alert("Sucesso",result.data,
            
               )
+            listFig()
           }).catch((error) => {
             Alert.alert("ERRO","FIGURINHA NÃO EXISTENTE")
           });

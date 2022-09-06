@@ -42,7 +42,7 @@ import Tunisia from './src/pages/paginas/tunisia';
 import Uruguai from './src/pages/paginas/uruguai';
 import Wales from './src/pages/paginas/wales';
 import Australia from './src/pages/paginas/australia';
-import FifaWorld from './src/pages/paginas/fifaworld';
+//import FifaWorld from './src/pages/paginas/fifaworld';
 
 const Drawer = createDrawerNavigator();
 
@@ -438,18 +438,7 @@ export default function App() {
             },
           }}
           />
-          <Drawer.Screen name="Fifa World Cup" component={FifaWorld}
-         options={{
-            drawerItemStyle: { height: 0 },
-            headerStyle: {
-              backgroundColor: '#9B072E',
-            },
-            headerTintColor: '#fff',
-            headerTitleStyle: {
-              fontWeight: 'bold',
-            },
-          }}
-          />
+          
       </Drawer.Navigator>
     </NavigationContainer>
   );
