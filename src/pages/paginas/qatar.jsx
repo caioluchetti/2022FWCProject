@@ -19,17 +19,22 @@ export default function Qatar(props) {
     useEffect(()=>{
         listFig();        
 
-      },[])
+
+      },[
+
+        props.route.params.rota
+
+      ])
       
-      const paramfig = {
-        PAGINA: "Qatar"
+      let paramfig = {
+        PAGINA: props.route.params.rota
     }
 
 
       function listFig() {
-        console.log(cell)
-        console.log("teste")
-        console.log(paramfig)
+        // console.log(cell)
+        // console.log("teste")
+        // console.log(paramfig)
 
         const result2 =  axios.post('/fig/listaespecifico', paramfig)
         .then((result2) =>{
