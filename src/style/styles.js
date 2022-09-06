@@ -8,7 +8,7 @@ export default StyleSheet.create({
         alignItems:'center',
         alignSelf:'center',
         flex:1,
-        width:'100%',
+       
         
 
     },
@@ -99,14 +99,21 @@ export default StyleSheet.create({
         fontSize:70,
         color: '#9B072E',
         textShadowRadius: 6,
-        width:'20%'
+        width:'40%'
     },
     headcadastro:{
 
+        justifyContent:'center',
+        alignItems:'center',
+        textAlign:'center',
+        height:'60%',
+        width:'80%',
         alignContent:'center',
         flexDirection:'column',
-        margin:10,
-        
+        marginTop:10,
+        padding:10,
+        marginHorizontal:20,
+       
     }
 
 

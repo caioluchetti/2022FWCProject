@@ -6,6 +6,8 @@ import styles from '../style/styles';
 
 export default function Main(props){
 
+
+    
     const metadeTela = Dimensions.get('window').width / 2 * 0.95;
 
 

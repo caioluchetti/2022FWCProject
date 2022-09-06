@@ -8,7 +8,7 @@ import axios from '../../../axios';
 import {cromos} from '../../component/cromos'
 
 
-export default function Polonia(props) {
+export default function Australia(props) {
 
 
    
@@ -23,7 +23,7 @@ export default function Polonia(props) {
       },[])
       
       const paramfig = {
-        PAGINA: "Polônia"
+        PAGINA: "Austrália"
     }
 
 

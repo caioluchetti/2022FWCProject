@@ -8,22 +8,18 @@ import axios from '../../../axios';
 import {cromos} from '../../component/cromos'
 
 
-export default function Polonia(props) {
-
-
-   
-
+export default function Especiais(props) {
     const [vetor, setArray] = useState([]);
     const [codfig, setCodfig] = useState('');
     const [cell, setCell] = useState('');
 
     useEffect(()=>{
         listFig();
-        
+
       },[])
       
       const paramfig = {
-        PAGINA: "Polônia"
+        PAGINA: "Coca Cola"
     }
 
 
@@ -129,9 +125,3 @@ export default function Polonia(props) {
     );
 
 }
-
-
-
-
-
-
