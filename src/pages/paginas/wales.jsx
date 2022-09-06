@@ -8,7 +8,7 @@ import axios from '../../../axios';
 import {cromos} from '../../component/cromos'
 
 
-export default function Qatar(props) {
+export default function Wales(props) {
 
    
     return (
