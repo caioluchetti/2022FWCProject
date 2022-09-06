@@ -164,7 +164,7 @@ export const cromos = [
     {
         pais: "Especiais",
         rota: 'Coca Cola',
-        imagem: require('../imgs/coreia.png'),
+        imagem: require('../imgs/coca-cola.png'),
     },
     
     

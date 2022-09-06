@@ -425,7 +425,7 @@ export default function App() {
             },
           }}
           />
-           <Drawer.Screen name="Coca Cola" component={Australia}
+           <Drawer.Screen name="Coca Cola" component={CocaCola}
          options={{
             drawerItemStyle: { height: 0 },
             headerStyle: {

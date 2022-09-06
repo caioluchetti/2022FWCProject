@@ -26,7 +26,7 @@ export default function Paises(props) {
                             return (
                                     <TouchableOpacity key={array.pais} style={{ borderColor: '#9B072E', margin: 30, borderWidth: 2, padding: 30, flexDirection: 'row', width: '80%', borderRadius: 10 }} onPress={() => props.navigation.navigate(array.rota)}>
                                         <View style={{ width: '40%' }}>
-                                            <Image source={array.imagem}style={{ width: 100, height: 100, borderRadius: 50, borderColor: 'rgba(20,70,20,.3)', borderWidth: 4 }} />
+                                            <Image source={array.imagem}style={{ width: 100, height: 100, borderRadius: 50, borderColor: '#9B072E', borderWidth: 4 }} />
                                         </View>
                                        
                                         <View style={{ width: "60%", alignContent: 'center', alignItems: 'center' }}>
