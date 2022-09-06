@@ -25,7 +25,8 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.cortada.figurasapp"
+      "package": "com.cortada.figurasapp",
+      "versionCode": 1
     },
     "web": {
       "favicon": "./assets/favicon.png"

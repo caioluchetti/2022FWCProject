@@ -114,7 +114,8 @@ export default StyleSheet.create({
         padding:10,
         marginHorizontal:20,
        
-    }
+    },
+    botaoPaginas:{backgroundColor:'rgba(20,80,20,.3)', marginTop:20,marginHorizontal:5 , borderWidth: 2, padding: 0, flexDirection: 'column', width: '25%',height:40, borderRadius: 10 }
 
 
 })

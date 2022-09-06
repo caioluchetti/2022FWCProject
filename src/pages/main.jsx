@@ -20,11 +20,8 @@ export default function Main(props){
                 <TouchableOpacity style={styles.botaoMain} onPress={() => props.navigation.navigate('Cadastrar Figurinha')}>
                          <Text style={{ textAlign: 'center', fontSize: 20, fontWeight: 'bold', color: 'white', textShadowRadius: 6, textShadowColor: 'black' }}>Cadastrar Figurinha</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.botaoMain} onPress={() => props.navigation.navigate('Meu Álbum')}>
-                         <Text style={{ textAlign: 'center', fontSize: 20, fontWeight: 'bold', color: 'white', textShadowRadius: 6, textShadowColor: 'black' }}>Meu Álbum</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.botaoMain} onPress={() => props.navigation.navigate('Todos os Países')}>
-                         <Text style={{ textAlign: 'center', fontSize: 20, fontWeight: 'bold', color: 'white', textShadowRadius: 6, textShadowColor: 'black' }}>Países </Text>
+                <TouchableOpacity style={styles.botaoMain} onPress={() => props.navigation.navigate('Todos as Páginas')}>
+                         <Text style={{ textAlign: 'center', fontSize: 20, fontWeight: 'bold', color: 'white', textShadowRadius: 6, textShadowColor: 'black' }}>Páginas </Text>
                 </TouchableOpacity>
 
 

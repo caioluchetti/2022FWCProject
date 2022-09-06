@@ -42,6 +42,7 @@ import Tunisia from './src/pages/paginas/tunisia';
 import Uruguai from './src/pages/paginas/uruguai';
 import Wales from './src/pages/paginas/wales';
 import Australia from './src/pages/paginas/australia';
+import FifaWorld from './src/pages/paginas/fifaworld';
 
 const Drawer = createDrawerNavigator();
 
@@ -52,7 +53,7 @@ export default function App() {
         <Drawer.Screen name="Home" component={Main} />
         <Drawer.Screen name="Cadastrar Figurinha" component={Cadastrar} />
         <Drawer.Screen name="Meu Álbum" component={Album} />
-        <Drawer.Screen name="Todos os Países" component={Paises}/>
+        <Drawer.Screen name="Todos as Páginas" component={Paises}/>
         <Drawer.Screen name="Qatar" component={Qatar}
          options={{
             drawerItemStyle: { height: 0 },
@@ -426,6 +427,18 @@ export default function App() {
           }}
           />
            <Drawer.Screen name="Coca Cola" component={CocaCola}
+         options={{
+            drawerItemStyle: { height: 0 },
+            headerStyle: {
+              backgroundColor: '#9B072E',
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+          }}
+          />
+          <Drawer.Screen name="Fifa World Cup" component={FifaWorld}
          options={{
             drawerItemStyle: { height: 0 },
             headerStyle: {
