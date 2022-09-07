@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TouchableOpacity, Dimensions, Image, TextInput ,Alert, KeyboardAvoidingView,ScrollView, SafeAreaView} from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Dimensions,Switch, Image, TextInput ,Alert, KeyboardAvoidingView,ScrollView, SafeAreaView} from 'react-native';
 import React, { useEffect, useState } from 'react';
 import styles from '../../style/styles';
 import { TextInputMask } from 'react-native-masked-text';
@@ -10,7 +10,8 @@ import {cromos} from '../../component/cromos'
 
 export default function Qatar(props) {
 
-   
+    const [isEnabled, setIsEnabled] = useState(false);
+    const toggleSwitch = () => setIsEnabled(previousState => !previousState);
 
     const [vetor, setArray] = useState([]);
     const [codfig, setCodfig] = useState('');
@@ -19,6 +20,7 @@ export default function Qatar(props) {
     useEffect(()=>{
         listFig();        
 
+        console.log(props.route.params.rota)
 
       },[
 
@@ -32,9 +34,9 @@ export default function Qatar(props) {
 
 
       function listFig() {
-        // console.log(cell)
-        // console.log("teste")
-        // console.log(paramfig)
+        //  console.log(cell)
+        //  console.log("teste")
+        //  console.log(paramfig)
 
         const result2 =  axios.post('/fig/listaespecifico', paramfig)
         .then((result2) =>{
@@ -52,6 +54,7 @@ export default function Qatar(props) {
 
         console.log(paramfig);
 
+      if(!isEnabled){
         const result = axios.post('/fig/cadastrar',paramfig)
         .then((result) => {
             
@@ -64,17 +67,45 @@ export default function Qatar(props) {
             Alert.alert("ERRO","FIGURINHA NÃO EXISTENTE")
           });
   
+      } else{
+        const result = axios.post('/fig/remover',paramfig)
+        .then((result) => {
+            
+
+            Alert.alert("Sucesso",result.data,
+           
+              )
+            listFig()
+          }).catch((error) => {
+            Alert.alert("ERRO","FIGURINHA NÃO EXISTENTE")
+          });
+
+      }
         }
 
     return (
 
 
-        <KeyboardAvoidingView 
-        behavior={Platform.OS === "ios" ? "padding" : "height"}
-            style={styles.container}
-            keyboardVerticalOffset={70}>
+        
             <ScrollView style={{width:'100%'}}>
+            <View style={styles.containerHead}>
+
+                <Text>Adicionar</Text>
+
+                        <Switch
+                        trackColor={{ false: "#6b806d", true: "#996b6b" }}
+                        thumbColor={isEnabled ? "#e34d4d" : "#a1de78"}
+                        ios_backgroundColor="#3e3e3e"
+                        onValueChange={toggleSwitch}
+                        value={isEnabled}
+                        />
+
+                <Text>Remover</Text>
+                </View>
             <SafeAreaView style={styles.containerAlbum}>
+
+            
+           
 
             {
                         vetor && vetor.map(function (array) {
@@ -82,13 +113,16 @@ export default function Qatar(props) {
                             return (
                                
 
-                                    <TouchableOpacity key={array.CODIGO} style={{backgroundColor:'rgba(20,80,20,.3)', marginTop:20,marginHorizontal:5 , borderWidth: 2, padding: 0, flexDirection: 'column', width: '25%',height:40, borderRadius: 10 }}>
+                                    <TouchableOpacity key={array.CODIGO} onPress={() => postFiguras(array)} style={{backgroundColor:'rgba(20,80,20,.3)', marginTop:20,marginHorizontal:5 , borderWidth: 2, padding: 0, flexDirection: 'column', width: '25%',height:70, borderRadius: 10 }}>
                                     <View style={{ width: "100%", alignContent: 'center', alignItems: 'center' }}>
                                         <Text style={{ fontWeight: 'bold', textAlign: 'center',fontSize:10 }}>
                                             {array.PAGINA}
                                         </Text>
                                         <Text style={{ fontStyle: 'italic', textAlign: 'center',fontSize:10  }}>
                                             {array.CODIGO}
+                                        </Text>
+                                        <Text style={{ fontStyle: 'italic', textAlign: 'center',fontSize:10  }}>
+                                            Quantidade: {array.QUANTIDADE}
                                         </Text>
                                     </View>
                                 </TouchableOpacity>
@@ -98,13 +132,16 @@ export default function Qatar(props) {
                                    
                             );}else{
                                 return (
-                                <TouchableOpacity key={array.CODIGO} onPress={() => postFiguras(array)} style={{ backgroundColor:'rgba(80,20,20,.3)', marginTop:20,marginHorizontal:5 , borderWidth: 2, padding: 0, flexDirection: 'column', width: '25%',height:40, borderRadius: 10 }}>
+                                <TouchableOpacity key={array.CODIGO} onPress={() => postFiguras(array)} style={{ backgroundColor:'rgba(80,20,20,.3)', marginTop:20,marginHorizontal:5 , borderWidth: 2, padding: 0, flexDirection: 'column', width: '25%',height:70, borderRadius: 10 }}>
                                     <View style={{ width: "100%", alignContent: 'center', alignItems: 'center' }}>
                                         <Text style={{ fontWeight: 'bold', textAlign: 'center',fontSize:10 }}>
                                             {array.PAGINA}
                                         </Text>
                                         <Text style={{ fontStyle: 'italic', textAlign: 'center',fontSize:10  }}>
                                             {array.CODIGO}
+                                        </Text>
+                                        <Text style={{ fontStyle: 'italic', textAlign: 'center',fontSize:10  }}>
+                                            Quantidade: {array.QUANTIDADE}
                                         </Text>
                                     </View>
                                 </TouchableOpacity>
@@ -125,7 +162,7 @@ export default function Qatar(props) {
 
                 </SafeAreaView>
                 </ScrollView>
-        </KeyboardAvoidingView>
+       
         
 
 

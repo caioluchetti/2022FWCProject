@@ -28,12 +28,12 @@ export const cromos = [
     },
     {
         pais: "Iran",
-        rota: 'Iran',
+        rota: 'Irã',
         imagem: require('../imgs/iran.png'),
     },
     {
         pais: "EUA",
-        rota: 'EUA',
+        rota: 'Estados Unidos',
         imagem: require('../imgs/eua.png'),
     },
     {
@@ -164,12 +164,12 @@ export const cromos = [
     {
         pais: "Coca Cola",
         rota: 'Coca Cola',
-        imagem: require('../imgs/coreia.png'),
-    },
- /*   {
-        pais: "Fifa World Cup",
-        rota: 'Fifa World Cup',
         imagem: require('../imgs/coca-cola.png'),
     },
-   */ 
+    {
+        pais: "Fifa World Cup",
+        rota: 'Copa do Mundo',
+        imagem: require('../imgs/icon.png'),
+    },
+   
 ]

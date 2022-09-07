@@ -12,6 +12,17 @@ export default StyleSheet.create({
         
 
     },
+    containerHead:{
+        justifyContent:'center',
+        alignItems:'center',
+        alignSelf:'center',
+        flex:1,
+        width:'100%',
+        flexDirection:'row',
+       
+        
+
+    },
     containerAlbum:{
         justifyContent:'center',
         alignItems:'center',
