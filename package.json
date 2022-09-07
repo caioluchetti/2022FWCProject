@@ -29,7 +29,8 @@
     "react-native-text-input-mask": "^3.1.4",
     "react-native-web": "^0.18.9",
     "react-scripts": "^5.0.1",
-    "rn-text-input-mask": "^0.5.3"
+    "rn-text-input-mask": "^0.5.3",
+    "@expo/webpack-config": "^0.17.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"
