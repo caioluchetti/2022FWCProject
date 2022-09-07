@@ -6,7 +6,7 @@
     "android": "expo run:android",
     "ios": "expo run:ios",
     "start": "expo start --web",
-    "build": "react-scripts build"
+    "build": "react-scripts web-build"
   },
   "dependencies": {
     "@react-navigation/drawer": "^6.4.4",
