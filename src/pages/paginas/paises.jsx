@@ -13,22 +13,52 @@ export default function Paises(props) {
 
     const [paramPag, setparamPag] = useState()
     const [soma, setSoma] = useState(0);
+    const [vetor, setArray] = useState([]);
 
     useEffect(() => {
-    // TotalFig();
 
-      }, []);
+        listFig()
+      }, [])
 
-//       const TotalFig = async () => {
+      async function listFig() {
 
-//     const result2 =  axios.get('/fig/somaind')
-//     .then((result2) =>{
-//         console.log(result2.data)
-//     }).catch((error) => {
-//         console.error(error);
-//     })
+        try {
+          let data = Object.values(cromos);
+          console.log(typeof (data))
+    
+    
+          const response = await axios.get('/fig/somaind')
+           
+         if(response){
+          response.data.forEach(element => {
+            const i = data.findIndex(el => element.PAGINA == el.nome)
+            console.log(response.data)
+            data[i].falta = element.somaTotal
+           
+          });
+    
+         }
+          console.log(data)
+          let data2 = Object.values(data);
+          setArray(data2)
+          
+          // if (response) {
+          //     console.log(response)
+          //     console.log(typeof(response))
+          //     const entry = Object.entries(response);
+          //     console.log(entry[0][1])
+    
+          //     setArray(entry[0][1])
+          // }
+    
+        }catch(error){
+          console.log(error)
+        }
+    
+    
+        }
+    
 
-// }
 
 
    
@@ -39,10 +69,7 @@ export default function Paises(props) {
             <SafeAreaView style={styles.container}>
 
             {
-                        cromos && cromos.map(function (array) {
-       
-                            // setparamPag(array.rota)
-                            // TotalFig();
+                        vetor && vetor.map(function (array) {
                             return (
                                     <TouchableOpacity key={array.pais} style={{ borderColor: '#9B072E', margin: 30, borderWidth: 2, padding: 10, flexDirection: 'row', width: '80%', borderRadius: 10 }} onPress={() => props.navigation.navigate('Each',{rota:array.rota})}>
                                         <View style={{ width: '40%' }}>
@@ -57,8 +84,8 @@ export default function Paises(props) {
                                             <Text style={{ textAlign: 'center', fontSize: 20, fontWeight: 'bold', color: 'white', textShadowRadius: 6, textShadowColor: 'black' }}>
                                                 {array.pais}
                                             </Text>
-                                            <Text style={{ fontStyle: 'italic', textAlign: 'center',fontSize:10  }}>
-                                                Quantidade
+                                            <Text style={{ textAlign: 'center', fontSize: 20,  color: 'white', textShadowRadius: 6, textShadowColor: 'black' }}>
+                                                Faltantes: {array.falta}
                                             </Text>
                                         </View>
                                     </TouchableOpacity>

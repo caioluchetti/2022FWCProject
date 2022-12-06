@@ -27,8 +27,8 @@ export default function Cadastrar(props) {
 
         const result2 = await axios.get('/fig/total')
         .then((result2) =>{
-            console.log(result2.data[0].total)
-            setTotal(result2.data[0].total)
+            console.log(result2.data[0].somaTotal)
+            setTotal(result2.data[0].somaTotal)
 
         }).catch((error) => {
             console.error(error);
